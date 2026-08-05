@@ -1,7 +1,12 @@
 # Verilog Lab
 
+**🔗 배포 사이트: https://veriloglab.netlify.app**
+
 Verilog(교육용 부분집합)로 조합·순서 논리 회로를 배우는 완전 정적 웹앱. 서버가 없다 —
 파서·시뮬레이터·회로 편집기가 전부 브라우저에서 동작한다.
+
+내부 설계(파서/시뮬레이터/회로 변환 알고리즘)는 [`docs/DESIGN.md`](docs/DESIGN.md),
+배포 방식·계정 정보는 [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)에 정리되어 있다.
 
 - **회로도 ⇄ Verilog 코드 양방향 변환**: 회로도를 그리면 Verilog 코드로, Verilog 코드를 쓰면 회로도로 변환된다.
 - **조합 논리 시뮬레이션**: 입력 스위치를 눌러 보거나, 자동 생성된 진리표로 확인.
@@ -32,7 +37,8 @@ npm test
 npm run build
 ```
 
-`dist/`에 정적 파일이 생성된다. Netlify가 이 명령을 그대로 실행해 자동 배포한다(`netlify.toml` 참고).
+`dist/`에 정적 파일이 생성된다. `main`에 push하면 Netlify가 이 명령을 그대로 실행해
+자동 배포한다 — 자세한 내용은 [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) 참고.
 
 ## 지원하는 Verilog 부분집합
 
